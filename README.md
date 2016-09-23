@@ -1,5 +1,5 @@
 # Zumme
 
-![](screenshot/Screenshot_1.png)
+![](Screenshots/Screenshot_1.png)
 
-![](screenshot/Screenshot_2.png)
+![](Screenshots/Screenshot_2.png)
