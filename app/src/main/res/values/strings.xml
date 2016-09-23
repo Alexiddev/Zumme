@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Zumme</string>
+
+    <!--Rates info-->
+
+    <string name="registration_bonus">registration bonus</string>
+    <string name="messenger_name">messenger name</string>
+    <string name="connection_fee">connection fee</string>
+    <string name="sms_price">sms_price</string>
+    <string name="rating">rating</string>
+    <string name="call_price">call_price</string>
+    <string name="number_of_comments">number_of_comments</string>
+    <string name="google_store_link">google store link</string>
+
+    <!--End Rates info-->
+
+    <!--RatesActivity-->
+
+    <string name="get_price">get prices</string>
+    <string name="is_mobile">Is mobile: </string>
+
+    <!--End RatesActivity-->
+
+</resources>
