@@ -2,11 +2,17 @@
 package alexiddev.test.zumme.model;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import static alexiddev.test.zumme.R.id.destination;
+import static alexiddev.test.zumme.R.id.isMobile;
 
-public class Rate {
+
+public class Rate  implements Parcelable{
 
     @SerializedName("registration_bonus")
     @Expose
@@ -177,4 +183,40 @@ public class Rate {
         this.googleStoreLink = googleStoreLink;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(registrationBonus);
+        dest.writeString(messengerName);
+        dest.writeDouble(connectionFee);
+        dest.writeDouble(smsPrice);
+        dest.writeDouble(rating);
+        dest.writeDouble(callPrice);
+        dest.writeInt(numberOfComments);
+        dest.writeString(googleStoreLink);
+    }
+
+    public static final Parcelable.Creator<Rate> CREATOR = new Parcelable.Creator<Rate>() {
+        public Rate createFromParcel(Parcel in) {
+            return new Rate(in);
+        }
+        public Rate[] newArray(int size) {
+            return new Rate[size];
+        }
+    };
+
+    public Rate(Parcel in) {
+        registrationBonus = in.readString();
+        messengerName = in.readString();
+        connectionFee = in.readDouble();
+        smsPrice = in.readDouble();
+        rating = in.readDouble();
+        callPrice = in.readDouble();
+        numberOfComments = in.readInt();
+        googleStoreLink = in.readString();
+    }
 }
